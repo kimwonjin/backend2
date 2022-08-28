@@ -1,24 +1,29 @@
 {
   "name": "instaclone",
   "version": "1.0.0",
-  "description": "Instaclone Backend.",
+  "description": "",
   "scripts": {
-    "dev": "nodemon --exec node server.js",
-    "start": "node server.js"
+    "dev": "nodemon --exec babel-node server",
+    "migrate": "npx prisma migrate dev",
+    "studio": "npx prisma studio"
   },
   "repository": {
     "type": "git",
-    "url": "ttps://github.com/kimwonjin/backend2.git"
+    "url": "https://github.com/kimwonjin/backend2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^4.2.1",
     "apollo-server": "^2.25.2",
     "graphql": "^15.8.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
-  },
-  "main": "server.js"
+    "@babel/core": "^7.18.13",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "nodemon": "^2.0.19",
+    "prisma": "^4.2.1"
+  }
 }
